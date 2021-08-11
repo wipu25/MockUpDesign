@@ -62,24 +62,21 @@ class NavPage extends HookWidget {
                 ],
               ),
               SizedBox(height: 20),
-              Expanded(
-                child: ListView(
-                  padding: EdgeInsets.all(10),
-                  scrollDirection: Axis.horizontal,
-                  children: [
-                    Container(
-                      padding: EdgeInsets.all(20),
-                      width: double.infinity,
-                      color: lightGrey,
-                      child: Column(
-                        children: [
-
-                        ],
+              Container(
+                width: double.infinity,
+                height: double.infinity,
+                child: ListView.builder(scrollDirection: Axis.horizontal,itemBuilder:(BuildContext _context, int index){
+                  return Column(
+                    children: [
+                      Container(
+                        color: Colors.black12,
                       ),
-                    ),
-                  ],
+                    ],
+                  );//your list elements here.
+                },
+                    itemCount: 5 //total count of elements on list
                 ),
-              )
+              ),
             ],
           ),
         ),

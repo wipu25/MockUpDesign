@@ -20,7 +20,6 @@ class HomePage extends HookWidget {
   @override
   Widget build(BuildContext context) {
     final position = useState(0);
-    final number = useState(0);
     final List<Widget> pageList = [
       NavPage(),
       Stack(
